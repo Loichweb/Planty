@@ -1,40 +1,56 @@
-<?php
-/**
- * The Header for our theme.
- *
- * @package OceanWP WordPress theme
- */
-
-?>
 <!DOCTYPE html>
-<html class="<?php echo esc_attr( oceanwp_html_classes() ); ?>" <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> <?php blankslate_schema_type(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta name="viewport" content="width=device-width" />
 
-	<?php wp_head(); ?>
+<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> <?php oceanwp_schema_markup( 'html' ); ?>>
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 
-	<?php wp_body_open(); ?>
+<div id="wrapper" class="hfeed">
 
-	<?php do_action( 'ocean_before_outer_wrap' ); ?>
+<header id="header" role="banner">
 
-	<div id="outer-wrap" class="site clr">
+<<<<<<< HEAD
+<div id="branding" class="site-logo">
+=======
+<div id="branding">
+<div id="site-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+>>>>>>> parent of 06ec6cb (15 avril 23h59)
+<?php
+// Vérifier si le thème prend en charge le logo personnalisé
+if ( function_exists( 'the_custom_logo' ) ) {
+	// Afficher le logo personnalisé
+	the_custom_logo();
+}
+?>
 
-		<a class="skip-link screen-reader-text" href="#main"><?php echo esc_html( oceanwp_theme_strings( 'owp-string-header-skip-link', false ) ); ?></a>
+</div>
 
-		<?php do_action( 'ocean_before_wrap' ); ?>
+<<<<<<< HEAD
+<nav class="Flexdirection" role="navigation" >
+ <div class="Navmenu"> 
+ <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
+ </div>   
+<div id="ordermenu"> 
+        <button>Commander </button>
+</div>
+=======
+<div id="site-description"<?php if ( !is_single() ) { echo ' itemprop="description"'; } ?>><?php bloginfo( 'description' ); ?></div>
+</div>
 
-		<div id="wrap" class="clr">
 
-			<?php do_action( 'ocean_top_bar' ); ?>
+<nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
+<div id="search"><?php get_search_form(); ?></div>
+>>>>>>> parent of 06ec6cb (15 avril 23h59)
+</nav>
 
-			<?php do_action( 'ocean_header' ); ?>
 
-			<?php do_action( 'ocean_before_main' ); ?>
+</header>
 
-			<main id="main" class="site-main clr"<?php oceanwp_schema_markup( 'main' ); ?> role="main">
-
-				<?php do_action( 'ocean_page_header' ); ?>
+<div id="container">
+<main id="content" role="main">

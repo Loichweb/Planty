@@ -1,13 +1,135 @@
 /*
-Theme Name: OceanWP Child
-Theme URI: https://oceanwp.org/
-Template: oceanwp
-Author: OceanWP
-Author URI: https://oceanwp.org/about-oceanwp/
-Description: OceanWP is the perfect theme for your project. Lightweight and highly extendable, it will enable you to create almost any type of website such a blog, portfolio, business website and WooCommerce storefront with a beautiful &amp; professional design. Very fast, responsive, RTL &amp; translation ready, best SEO practices, unique WooCommerce features to increase conversion and much more. You can even edit the settings on tablet &amp; mobile so your site looks good on every device. Work with the most popular page builders as Elementor, Beaver Builder, Brizy, Visual Composer, Divi, SiteOrigin, etc... Developers will love his extensible codebase making it a joy to customize and extend. Best friend of Elementor &amp; WooCommerce. Looking for a Multi-Purpose theme? Look no further! Check the demos to realize that it's the only theme you will ever need: https://oceanwp.org/demos/
-Tags: two-columns,right-sidebar,footer-widgets,blog,news,custom-background,custom-menu,post-formats,rtl-language-support,sticky-post,editor-style,threaded-comments,translation-ready,buddypress,custom-colors,featured-images,full-width-template,theme-options,e-commerce,block-styles,wide-blocks,accessibility-ready
-Version: 3.4.3.1681211164
-Updated: 2023-04-11 11:06:04
+Theme Name: BlankSlate Child
+Theme URI: https://github.com/tidythemes/blankslate
+Template: blankslate
+Author: TidyThemes
+Author URI: https://github.com/tidythemes
+Description: Donations: https://calmestghost.com/donate. BlankSlate is the definitive WordPress boilerplate starter theme. We've carefully constructed the most clean and minimalist theme possible for designers and developers to use as a base to build websites for clients or to build completely custom themes from scratch. Clean, simple, unstyled, semi-minified, unformatted, and valid code, SEO-friendly, jQuery-enabled, no programmer comments, standardized and as white label as possible, and most importantly, the CSS is reset for cross-browser-compatability and no intrusive visual CSS styles have been added whatsoever. A perfect skeleton theme. For support and suggestions, go to: https://github.com/tidythemes/blankslate/issues. Thank you.
+Tags: accessibility-ready,one-column,two-columns,custom-menu,featured-images,microformats,sticky-post,threaded-comments,translation-ready
+Version: 2023.1681576151
+Updated: 2023-04-15 16:29:11
 
 */
 
+body {
+    max-width: 1440px;
+<<<<<<< HEAD
+    font-family: "syne";
+
+}
+
+
+.header {
+    background-color: white;
+    height: auto;
+    width: 100%;
+}
+
+header,
+nav {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Réduire la taille du logo */
+
+    
+    /* Réorganiser le menu */
+    header{
+      display: block;
+      flex-direction: column;
+      width: 100%;
+    }
+    .site-logo {
+        display: flex;
+        justify-content: center;
+        height: auto;
+        width: 100%;
+        padding-top: 1em;
+        padding-bottom: 20px;
+    }
+
+    .header,nav {
+        gap: 31px;
+    }
+
+    }
+  
+/*logo */
+.site-logo {
+    width: 100%;
+    height: auto;
+    padding-left: 37px;
+
+}
+.site-logo img {
+    max-width: 191px;
+    height: auto;
+}
+
+
+
+
+/* Nav */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    line-height: 19px;
+    max-width: 100%;
+}
+nav a:hover {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 16px;
+  
+}
+
+/* Boutton nav*/
+#ordermenu {
+    width: 236px;
+
+}
+
+#ordermenu button {
+    background-color:#DC9F96 ;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: "syne";
+    width: 100%;
+    padding: 30px;
+    font-size: 1em;
+  }
+
+
+#ordermenu button:hover {
+    background-color: #C02E44 ;
+}
+
+/* Footer*/
+
+footer {
+    background-color: white;
+    text-align: center;
+    padding: 2%;
+
+}
+footer a {
+    text-decoration: none;
+    color: black;
+}
+=======
+}
+
+>>>>>>> parent of 06ec6cb (15 avril 23h59)

@@ -13,12 +13,30 @@ if ( !function_exists( 'chld_thm_cfg_locale_css' ) ):
     }
 endif;
 add_filter( 'locale_stylesheet_uri', 'chld_thm_cfg_locale_css' );
-         
-if ( !function_exists( 'child_theme_configurator_css' ) ):
-    function child_theme_configurator_css() {
-        wp_enqueue_style( 'chld_thm_cfg_child', trailingslashit( get_stylesheet_directory_uri() ) . 'style.css', array( 'font-awesome','simple-line-icons','oceanwp-style' ) );
+
+if ( !function_exists( 'chld_thm_cfg_parent_css' ) ):
+    function chld_thm_cfg_parent_css() {
+        wp_enqueue_style( 'chld_thm_cfg_parent', trailingslashit( get_template_directory_uri() ) . 'style.css', array(  ) );
     }
 endif;
-add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
+add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
 
+<<<<<<< HEAD
+/* Cette fonction pertmet d'ajouter un menu au footer */
+function register_footer_menu() {
+    register_nav_menu('footer-menu', __( 'Footer Menu' ));
+  }
+  add_action( 'init', 'register_footer_menu' );
+  
+
+/* Cette fonction pertmet d'ajouter un logo perso */
+function theme_prefix_setup() {
+    add_theme_support( 'custom-logo' );
+}
+add_action( 'after_setup_theme', 'theme_prefix_setup' );
+
+
+
+=======
+>>>>>>> parent of 06ec6cb (15 avril 23h59)
 // END ENQUEUE PARENT ACTION
